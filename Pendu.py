@@ -1,4 +1,4 @@
-# 1-
+# menu du jeu
 print("""Bienvenue dans le jeu du 
 
 ██████  ███████ ███    ██ ██████  ██    ██ 
@@ -18,13 +18,12 @@ player_choice = int(input("Quel difficulté voulez vous? : "))
  # 0 == L4// 1== L6// 2== L8 
 
 
-# 2-
 L4 = ["nike","puma"]
 L6 = ["chaton","ballon"]
 L8 = ["elephant","pingouin"]
 
 # -----------------------------[PARTIE FONCTIONS POUR LE JEU]------------------------------
-# 3-
+
 from random import randint
 def word_choosen(L):
     L_hide = ""
@@ -49,7 +48,6 @@ def count(L,L_hide):
 
 if player_choice == 0:
     result4 = word_choosen(L4)
-    #print(result4) pour voir si ça fonctionne bien (à enlever à la fin )
     print(len(result4)* " _")
     
     lives = 10
@@ -85,7 +83,7 @@ if player_choice == 0:
         elif answer0 in result4 :
             print(f"{answer0} existe dans le mot caché")
             bonne_rep.append(answer0)
-            print("Vous avez trouvez les lettres: ",bonne_rep) # réfléchir au tri des lettres
+            print("Vous avez trouvez les lettres: ",bonne_rep) 
             print(30 * "-")
             compteur_bonne_rep = compteur_bonne_rep + 1
         if compteur_bonne_rep == 4:
@@ -105,7 +103,6 @@ if player_choice == 0:
 
 elif player_choice == 1:
     result6 = word_choosen(L6)
-    # print(result6)  pour voir si ça fonctionne bien (à enlever à la fin )
     print(len(result6)* " _")
 
     lives = 10
@@ -140,7 +137,7 @@ elif player_choice == 1:
         elif answer1 in result6 :
             print(f"{answer1} existe dans le mot caché")
             bonne_rep.append(answer1)
-            print("Vous avez trouvez les lettres: ",bonne_rep) # réfléchir au tri des lettres
+            print("Vous avez trouvez les lettres: ",bonne_rep) 
             print(30 * "-")
             compteur_bonne_rep = compteur_bonne_rep + 1
         if compteur_bonne_rep == 6:
@@ -193,7 +190,7 @@ elif player_choice == 2:
         elif answer2 in result8 :
             print(f"{answer2} existe dans le mot caché")
             bonne_rep.append(answer2)
-            print("Vous avez trouvez les lettres: ",bonne_rep) # réfléchir au tri des lettres
+            print("Vous avez trouvez les lettres: ",bonne_rep)
             print(30 * "-")
             compteur_bonne_rep = compteur_bonne_rep + 1
         if compteur_bonne_rep == 8:
